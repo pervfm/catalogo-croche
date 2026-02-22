@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"
+    name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aranhê🕷️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Aranhê🕷️</h1>
+        <p>Peças artesanais feitas com amor🧶</p>
+    </header>
+
+<section class="catalogo">
+
+    <div class="produto">
+
+        <div class="carrossel">
+            <img src="imagens/vestido.jpg" class="slide ativo">
+            <img src="imagens/vestido2.jpg" class="slide">
+            
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+        <h3>Vestido Helena🩵</h3>
+
+        <p class="descricao">
+            Delicado e feito especialmente para sua pequena💐 <br>
+            Consultar valores por tamanho!
+        </p>
+
+        <a class="whatsapp-btn"
+           href="https://wa.me/5524974035372?text=Olá,%20vim%20pelo%20site%20e%20quero%20mais%20informações%20sobre%20o%20Vestido%20Helena🩵"
+           target="_blank">
+           Comprar pelo WhatsApp
+        </a>
+    </div>
+
+
+    <div class="produto">
+
+        <div class="carrossel">
+            <img src="imagens/croppednevoa.jpg" class="slide ativo">
+            <img src="imagens/croppednevoa2.jpg" class="slide">
+            
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+        <h3>Cropped Névoa Prateada🩶</h3>
+
+        <p class="descricao">
+            Se for para brilhar... que seja com franjas e atitude💫 <br>
+            Consultar valores por tamanho!
+        </p>
+
+        <a class="whatsapp-btn"
+           href="https://wa.me/5524974035372?text=Olá,%20vim%20pelo%20site%20e%20quero%20mais%20informações%20sobre%20o%20Cropped%20Névoa%20Prateada🩶"
+           target="_blank">
+           Comprar pelo WhatsApp
+        </a>
+    </div>
+
+    <div class="produto">
+
+        <div class="carrossel">
+            <img src="imagens/croppedceudeverao.jpg" class="slide ativo">
+            <img src="imagens/croppedceudeverao2.jpg" class="slide">
+            
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+        <h3>Cropped Céu de Verão💙</h3>
+
+        <p class="descricao">
+           Cropped feito à mão, com design minimalista e cheio de significado🌞 <br>
+            Consultar valores por tamanho!
+        </p>
+
+        <a class="whatsapp-btn"
+           href="https://wa.me/5524974035372?text=Olá,%20vim%20pelo%20site%20e%20quero%20mais%20informações%20sobre%20o%20Cropped%20Céu%20De%20Verão💙"
+           target="_blank">
+           Comprar pelo WhatsApp
+        </a>
+    </div>
+
+    <div class="produto">
+
+        <div class="carrossel">
+            <img src="imagens/croppednimbus.jpg" class="slide ativo">
+            <img src="imagens/croppednimbus2.jpg" class="slide">
+            
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+        <h3>Cropped Nimbus🌪️</h3>
+
+        <p class="descricao">
+            Cropped de crochê com decote em V e amarração frontal, delicado e cheio de charme artesanal🌚<br>
+            Consultar valores por tamanho!
+        </p>
+
+        <a class="whatsapp-btn"
+           href="https://wa.me/5524974035372?text=Olá,%20vim%20pelo%20site%20e%20quero%20mais%20informações%20sobre%20o%20Cropped%20Nimbus🌪️"
+           target="_blank">
+           Comprar pelo WhatsApp
+        </a>
+    </div>
+
+
+    </section>
+
+    <footer>
+        <p>© 2026 Aranhê🕷️ | Feito à mão 🤍</p>
+    </footer>
+
+</div>
+
+<script>
+document.querySelectorAll(".carrossel").forEach(carrossel => {
+
+    let slides = carrossel.querySelectorAll(".slide");
+    let prev = carrossel.querySelector(".prev");
+    let next = carrossel.querySelector(".next");
+
+    let index = 0;
+
+    next.addEventListener("click", () => {
+        slides[index].classList.remove("ativo");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("ativo");
+    });
+
+    prev.addEventListener("click", () => {
+        slides[index].classList.remove("ativo");
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add("ativo");
+    });
+
+});
+</script>
+
+</body>
+</html>

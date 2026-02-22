@@ -1,0 +1,152 @@
+** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5efe9; /* nude */
+    color: #1c1c1c;
+}
+
+header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url("imagens/fundo.jpg");
+        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #f5efe9;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+header h1{
+    font-family: 'Playfair Display';
+    font-size: 42px;
+    opacity: 0,8;
+
+}
+
+header p {
+    font-family: 'Poppins';
+    margin-top: 10px;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(1fr); /* 1 coluna */
+    gap: 60px; /* espaço entre os cards */
+    padding: 60px 15px; /* espaço nas bordas */
+    justify-items: center; /* centraliza os cards */
+}
+
+/* Card do produto */
+.produto {
+    width: 90%;
+    max-width: 420px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+produto:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Carrossel */
+.carrossel {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.slide.ativo {
+    display: block;
+}
+
+/* Setas */
+.prev, .next {
+    position: absolute;
+    top: 45%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Texto */
+.produto h3 {
+    font-family: 'Poppins';
+    margin: 15px 0 5px 0;
+    margin-top: 20px;
+    color: black;
+}
+
+.descricao {
+    font-family: 'Poppins';
+    padding: 0 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Botão WhatsApp */
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: black;
+    color: #f5efe9;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #333;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #f5efe9;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .catalogo {
+        grid-template-columns: 1fr; /* 1 por linha no celular */
+        padding: 40px 20px;
+    }
+}
